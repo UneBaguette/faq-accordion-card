@@ -6,12 +6,6 @@ let h3;
 let spans;
 let arrow;
 
-title.forEach(titles => {
-    titles.addEventListener('click', function(){
-    })
-});
-
-
 for (let i = 0; i < title.length; i++){
     let titles = title[i];
     titles.addEventListener('click' , function() {

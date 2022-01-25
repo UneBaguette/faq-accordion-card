@@ -125,6 +125,16 @@ body {
     .boite h3 {
         text-align: center;
     }
+    body {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 13px;
+        color:#1d1e35;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/bg-pattern-desktop.svg);
+        background: linear-gradient(#af67e9, #6565e7) fixed;
+    }
     .boite {
         background-color: #FFF;
         border-radius: 25px;

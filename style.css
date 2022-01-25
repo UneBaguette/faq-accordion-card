@@ -80,6 +80,7 @@ body {
 .text img {
     align-self: center;
     width: 10px;
+    transition: ease-in 0.1s;
 }
 
 

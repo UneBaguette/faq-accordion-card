@@ -2,30 +2,24 @@ const title = document.querySelectorAll('.title');
 const titre = document.querySelectorAll('.title > h3');
 const span = document.querySelectorAll('.text > span');
 const imgs = document.querySelectorAll('.title > img');
-let h3;
-let spans;
-let arrow;
+const text = document.querySelectorAll('.text');
+let index = 0;
 
 for (let i = 0; i < title.length; i++){
     let titles = title[i];
     titles.addEventListener('click' , function() {
-        h3 = titre[i];
-        spans = span[i];
-        arrow = imgs[i];
-        if (!h3.classList.contains("active") && !spans.classList.contains("activespan") && !arrow.classList.contains("activearrow")) {
-            h3.classList.add("active");
-            spans.classList.add("activespan");
-            arrow.classList.add("activearrow");
-        }
-        else if (h3.classList.contains("active") && spans.classList.contains("activespan") && arrow.classList.contains("activearrow")) {
-            h3.classList.remove("active");
-            spans.classList.remove("activespan");
-            arrow.classList.remove("activearrow");
-        }
-        else {
-            h3.classList.remove("active");
-            spans.classList.remove("activespan");
-            arrow.classList.remove("activearrow");
+        index = this.getAttribute('data-num');
+        for(let i = 0; i < text.length; i++){
+            if (title[i].getAttribute('data-num') === index){
+                titre[i].classList.add("active");
+                span[i].classList.add("activespan");
+                imgs[i].classList.add("activearrow");
+            }
+            else {
+                titre[i].classList.remove("active");
+                span[i].classList.remove("activespan");
+                imgs[i].classList.remove("activearrow");
+            }
         }
     })
 }

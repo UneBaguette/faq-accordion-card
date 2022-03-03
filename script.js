@@ -6,14 +6,19 @@ const text = document.querySelectorAll('.text');
 let index = 0;
 
 for (let i = 0; i < title.length; i++){
-    let titles = title[i];
+    let titles = titre[i];
+    let s = span[i];
+    let im = imgs[i];
     titles.addEventListener('click' , function() {
-        index = this.getAttribute('data-num');
         for(let i = 0; i < text.length; i++){
-            if (title[i].getAttribute('data-num') === index){
-                titre[i].classList.add("active");
-                span[i].classList.add("activespan");
-                imgs[i].classList.add("activearrow");
+            if (titles === titre[i] && !titles.classList.contains('active')){
+                titles.classList.add("active");
+                s.classList.add("activespan");
+                im.classList.add("activearrow");
+            } else if (titles === titre[i] && titles.classList.contains('active')){
+                titles.classList.remove("active");
+                s.classList.remove("activespan");
+                im.classList.remove("activearrow");
             }
             else {
                 titre[i].classList.remove("active");

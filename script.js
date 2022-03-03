@@ -6,10 +6,11 @@ const text = document.querySelectorAll('.text');
 let index = 0;
 
 for (let i = 0; i < title.length; i++){
+    let a = title[i];
     let titles = titre[i];
     let s = span[i];
     let im = imgs[i];
-    titles.addEventListener('click' , function() {
+    a.addEventListener('click' , function() {
         for(let i = 0; i < text.length; i++){
             if (titles === titre[i] && !titles.classList.contains('active')){
                 titles.classList.add("active");
